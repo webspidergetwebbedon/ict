@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Palmridge ICT Site</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fef9f4;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    :root {
+      --primary: #00b894;       /* Emerald Green */
+      --secondary: #ffeaa7;     /* Soft Yellow Beige */
+      --accent: #ff7675;        /* Coral Red */
+    }
+
+    header {
+      background-color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: var(--primary);
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #444;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .cta-button {
+      background-color: white;
+      color: var(--primary);
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #f1f1f1;
+      transform: scale(1.05);
+    }
+
+    .features {
+      padding: 60px 20px;
+      background-color: var(--secondary);
+      text-align: center;
+    }
+
+    .features h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .card {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 300px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .interactive {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .interactive h2 {
+      margin-bottom: 2rem;
+    }
+
+    .toggle {
+      margin: 20px 0;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 28px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: 0.4s;
+      border-radius: 34px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 22px;
+      width: 22px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: var(--primary);
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(22px);
+    }
+
+    .progress-container {
+      width: 80%;
+      max-width: 400px;
+      margin: 30px auto;
+      background-color: #eee;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      width: 65%;
+      background-color: var(--accent);
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+      font-weight: bold;
+      transition: width 0.4s ease-in-out;
+    }
+
+    footer {
+      background-color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #777;
+      border-top: 1px solid #eee;
+    }
+
+    @media (max-width: 768px) {
+      .cards {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .hero h1 {
+        font-size: 2.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <div class="logo">Palmridge ICT Site</div>
+    <nav>
+      <a href="Home.html">Home</a>
+      <a href="Careers.html">Careers</a>
+      <a href="Get-Started.html">Get Started</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>ICT Career Oppertunities</h1>
+    <p>Explore your Future in Tech.</p>
+    <a href="Get-Started.html"><button class="cta-button">Get Started</button></a>
+  </section>
+
+  <!-- Features -->
+  <section class="features">
+    <h2>Why Choose ICT?</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Endless Opportunities</h3>
+        <p>From coding to cybersecurity, ICT offers a wide range of career paths.</p>
+      </div>
+      <div class="card">
+        <h3>High Demand</h3>
+        <p>Companies need ICT professionals more than ever in today's digital world.</p>
+      </div>
+      <div class="card">
+        <h3>Creative & Technical</h3>
+        <p>ICT combines logic with innovation to solve real-world problems.</p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
